@@ -7,9 +7,10 @@ import io.flutter.plugins.GeneratedPluginRegistrant
 /**
  *
  * @author Soli
- * @Time 2019-08-20 17:12
+ * @Time 2019-08-20 18:11
  */
-class MyFlutterActivity : FlutterActivity() {
+class SimpleFlutterActivity : FlutterActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         GeneratedPluginRegistrant.registerWith(this)
