@@ -9,8 +9,7 @@ import io.flutter.plugins.GeneratedPluginRegistrant
  * @author Soli
  * @Time 2019-08-20 17:12
  */
-class MyFlutterActivity : BoostFlutterActivity() {
-
+class MyFlutterActivity2 : BoostFlutterActivity() {
 
     /**
      * 该方法返回的参数将会传递给上层的flutter对应的Widget
@@ -52,6 +51,6 @@ class MyFlutterActivity : BoostFlutterActivity() {
      * @return
      */
     override fun getContainerName(): String {
-        return "first"
+        return "second"
     }
 }

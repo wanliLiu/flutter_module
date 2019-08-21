@@ -3,6 +3,8 @@ package io.flutter
 import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.content.Intent
+import android.widget.Toast
 import com.taobao.idlefish.flutterboost.Debuger
 import com.taobao.idlefish.flutterboost.FlutterBoostPlugin
 import com.taobao.idlefish.flutterboost.interfaces.IPlatform
@@ -51,7 +53,25 @@ abstract class MyFlutterApplication : FlutterApplication() {
              * @return
              */
             override fun startActivity(context: Context?, url: String?, requestCode: Int): Boolean {
+
+                url ?: return false
+                context ?: return false
+
                 Debuger.log("startActivity url=$url")
+
+                if (url.contains(OpenNative)) {
+                    Toast.makeText(context, "打开本地Activity", Toast.LENGTH_SHORT).show()
+                } else {
+                    context.startActivity(Intent(context, MyFlutterActivity2::class.java))
+//                    when(url)
+//                    {
+//                        url.indexOf("second") ==  -> {
+//
+//                        }
+//                    }
+
+                }
+
                 return true
             }
 
