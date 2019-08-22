@@ -13,7 +13,7 @@ buildscript {
         //publishing
         classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4"
         classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
-        classpath "com.kezong:fat-aar:1.2.3"
+        classpath "com.kezong:fat-aar:1.2.5"
     }
 }
 
@@ -22,8 +22,7 @@ allprojects {
         google()
         jcenter()
         
-        if (userMaven.toBoolean())
-            maven { url "file:/Users/soli/Documents/project/m2/repository" }
+        maven { url "file:/Users/soli/Documents/project/m2/repository" }
     }
 }
 

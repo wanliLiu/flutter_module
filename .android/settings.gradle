@@ -3,8 +3,8 @@ include ':app'
 
 rootProject.name = 'android_generated'
 
-if (!userMaven.toBoolean()){
-    setBinding(new Binding([gradle: this]))
-    evaluate(new File(settingsDir, 'include_flutter.groovy'))
-}
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(settingsDir, 'include_flutter.groovy'))
+
 
